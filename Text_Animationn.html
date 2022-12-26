@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text_Animation</title>
+    <style>
+        body {
+           
+            background-color: #fff;
+            box-sizing: border-box;
+            display: grid;
+            height: 100vh;
+            place-items: center;
+        }
+
+        #animate {
+            color: gray;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        @keyframes changercolor {
+            20% {
+                background-color: green; 
+            }
+
+            50% {
+                content: 'WORK';
+                background-color: lightskyblue;
+            }
+
+            100% {content: 'EVERYTHING';
+                background-color: red;
+            }
+
+        }
+
+        #animate div::after {
+            content: 'LIFESTYLE';
+            animation-name: changercolor;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="animate">
+        MAKE <div></div>AWESOME!
+    </div>
+</body>
+
+</html>
